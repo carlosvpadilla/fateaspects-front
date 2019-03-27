@@ -1,11 +1,14 @@
 const webpack = require('webpack');
 const dotenv = require('dotenv');
 const dotenvConfig = dotenv.config();
-console.log(dotenvConfig);
 
-const env = dotenvConfig.parsed;
+let env;
 
-console.log(env);
+if (!dotenvConfig.error) {
+    env = dotenvConfig.parsed;
+} else {
+    env = process.env;
+}
 
 const envKeys = Object.keys(env).reduce((prev, next) => {
     prev[`process.env.${next}`] = JSON.stringify(env[next]);
