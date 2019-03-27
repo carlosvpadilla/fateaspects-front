@@ -8,7 +8,7 @@
   "main": "index.js",
   "scripts": {
     "build": "node-sass src/ -o src/ && webpack --config webpack.config.js",
-    "postinstall": "node-sass src/ -o src/ && webpack --config webpack.config.js"
+    "postinstall": "node-sass src/ -o src/ && webpack -p --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
