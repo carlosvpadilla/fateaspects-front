@@ -2,9 +2,13 @@
   "name": "fateaspects-front",
   "version": "1.0.0",
   "description": "",
+  "engines": {
+    "node": "11.12.0"
+  },
   "main": "index.js",
   "scripts": {
-    "build": "node-sass src/ -o src/ && webpack --config webpack.config.js"
+    "build": "node-sass src/ -o src/ && webpack --config webpack.config.js",
+    "postinstall": "node-sass src/ -o src/ && webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "",
@@ -18,12 +22,11 @@
     "@types/webpack": "^4.4.25",
     "axios": "^0.18.0",
     "dotenv": "^6.2.0",
+    "express": "^4.16.4",
     "react": "^16.8.4",
     "react-dom": "^16.8.4",
     "react-router-dom": "^4.3.1",
-    "socket.io-client": "^2.2.0"
-  },
-  "devDependencies": {
+    "socket.io-client": "^2.2.0",
     "@types/node-sass": "^4.11.0",
     "awesome-typescript-loader": "^5.2.1",
     "css-loader": "^2.1.1",
