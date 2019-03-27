@@ -1,0 +1,13 @@
+body {
+  background-color: #0B3E8A;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"; }
+
+.header-content {
+  background-color: #3C6AAD; }
+  .header-content h1 {
+    color: white; }
+  .header-content h2 {
+    color: white; }
+
+.main-content {
+  background-color: white; }

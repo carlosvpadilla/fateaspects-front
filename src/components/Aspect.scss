@@ -1,0 +1,23 @@
+@import './Colors.scss';
+
+.return-button {
+    a, a:visited {
+        color: white;
+    }
+}
+
+.aspect-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+    .aspect-card {
+        background-color: $color-secondary-1-2;
+        padding: 1em;
+        margin-bottom: 0.5em;
+
+        .quoted-aspect {
+            font-style: italic;
+        }
+    }
+}
