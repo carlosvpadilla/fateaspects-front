@@ -2,7 +2,7 @@ const express = require('express');
 const http = require('http');
 const path = require('path');
 let app = express();
-app.get("/dist", express.static(path.join(__dirname, 'dist')));
+app.use("/dist", express.static(path.join(__dirname, 'dist')));
 app.get('/', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'index.html'));
 });
