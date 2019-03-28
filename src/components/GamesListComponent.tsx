@@ -38,7 +38,7 @@ export class GamesList extends React.Component<GamesListProps, GamesListState> {
     }
 
     registerEvents() {
-        this.socket = openSocket('http://localhost:3000');
+        this.socket = openSocket(process.env.SERVER_URL);
         
         this.socket.on('new-game', (game: ServerGame) => {
             this.state.games.push(game);

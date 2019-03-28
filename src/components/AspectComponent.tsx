@@ -48,7 +48,7 @@ export class Aspect extends React.Component<AspectProps, AspectState> {
     }
 
     registerEvents() {
-        this.socket = openSocket('http://localhost:3000');
+        this.socket = openSocket(process.env.SERVER_URL);
         
         this.socket.on(`aspect-edit-${this.props.id}`, (aspect: ServerAspect) => {
             this.setState({ name: aspect.name, newName: aspect.name });

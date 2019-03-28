@@ -53,7 +53,7 @@ export class Game extends React.Component<GameProps, GameState> {
     }
 
     registerEvents() {
-        this.socket = openSocket('http://localhost:3000');
+        this.socket = openSocket(process.env.SERVER_URL);
         
         this.socket.on(`game-edit-${this.props.id}`, (game: ServerGame) => {
             this.setState({ name: game.name, newName: game.name });

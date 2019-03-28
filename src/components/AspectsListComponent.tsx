@@ -56,7 +56,7 @@ export class AspectsList extends React.Component<AspectsListProps, AspectsListSt
     }
 
     registerEvents() {
-        this.socket = openSocket('http://localhost:3000');
+        this.socket = openSocket(process.env.SERVER_URL);
 
         this.socket.on(`game-edit-${this.state.gameId}`, (editedGame: ServerGame) => {
             this.setState({ gameName: editedGame.name });
